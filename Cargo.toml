@@ -1,0 +1,19 @@
+[package]
+name = "cef-loki"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+tokio = { version = "1.47.1" , features = ["rt","macros","rt-multi-thread","signal","net"]}
+tokio-stream = { version = "0.1.17", features = ["signal","time"] }
+serde = { version = "1.0.228", features = ["serde_derive"] }
+thiserror = "2.0.17"
+log = { version = "0.4.29", features = ["kv_std"] }
+env_logger = "0.11.8"
+config = "0.15.11"
+lazy_static = "1.5.0"
+reqwest = { version = "0.13" , features = ["rustls-native-certs"], default-features = false}
+base64 = "0.22.1"
+tracing-loki-fmt = { git = "https://github.com/koa/tracing-loki-fmt", features = ["rustls-tls"], default-features = false }
+prost = "0.13"
+snap = "1.1"
