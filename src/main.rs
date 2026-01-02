@@ -158,7 +158,7 @@ async fn main() -> Result<(), Error> {
             Event::Message(messages) => {
                 let mut messages_by_labels = HashMap::new();
                 for message in messages {
-                    info!("Received message: {:?}", message);
+                    //info!("Received message: {:?}", message);
 
                     let mut level = Level::Info;
                     let mut labels = HashMap::<Cow<str>, Cow<str>>::new();
