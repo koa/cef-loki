@@ -1,7 +1,7 @@
 use crate::{config::CONFIG, error::Error};
 use base64::{Engine, prelude::BASE64_STANDARD};
 use env_logger::Env;
-use log::{Level, error, info};
+use log::{Level, error};
 use prost::Message;
 use tracing_loki_fmt::proto::logproto::{
     EntryAdapter, LabelPairAdapter, PushRequest, StreamAdapter,
